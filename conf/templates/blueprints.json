@@ -1,0 +1,13 @@
+{
+  "mbaas": {
+    "machines": {
+      "ship": 1
+    },
+    "loadBalancers": {
+      "dfc": {
+        "memberMachines": ["ship"],
+        "securityGroups": ["ops-admin", "{{orgName}}-{{siteName}}"]
+      }
+    }
+  }
+}

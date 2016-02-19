@@ -1,0 +1,40 @@
+{
+  "small": {
+    "ship": {
+      "instanceType": "c3.small",
+      "volumes": {
+        "/backup": "/dev/sda1",
+        "/data": "/dev/sdb"
+      },
+      "roles": ["fh-dynoman"],
+      "groups": ["ops-admin", "{{orgName}}-{{siteName}}"]
+    },
+    "db": {
+      "instanceType": "c3.small",
+      "volumes": {
+        "/backup": "/dev/sda1",
+        "/data": "/dev/sdb"
+      },
+      "roles": ["fh-ditch"],
+      "groups": ["ops-admin", "{{orgName}}-{{siteName}}"]
+    },
+    "gw": {
+      "instanceType": "c3.small",
+      "volumes": {
+        "/backup": "/dev/sda1",
+        "/data": "/dev/sdb"
+      },
+      "roles": ["ipsec"],
+      "groups": ["ops-admin", "{{orgName}}-{{siteName}}"]
+    },
+    "mgt": {
+      "instanceType": "c3.small",
+      "volumes": {
+        "/backup": "/dev/sda1",
+        "/data": "/dev/sdb"
+      },
+      "roles": ["nagios-server"],
+      "groups": ["ops-admin", "{{orgName}}-{{siteName}}"]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "ops-admin": {
+    "rules": [
+      {
+        "protocols": ["-1"],
+        "start": 0,
+        "end": 65535,
+        "sources": [
+          "83.147.149.210/32",
+          "46.38.161.225/32",
+          "54.229.76.48/32",
+          "79.125.117.182/32"
+        ]
+      }
+    ]
+  },
+  "{{orgName}}-{{siteName}}": {
+    "rules": [
+      {
+        "protocols": ["-1"],
+        "start": 0,
+        "end": 65535,
+        "groups": [
+          "{{orgName}}-{{siteName}}",
+          "{{siteName}}-api-lb"
+        ]
+      },
+      {
+        "protocols": [
+          "tcp",
+          "udp"
+        ],
+        "start": 8802,
+        "end": 8802,
+        "groups": ["{{orgName}}-{{siteName}}-ditch-lb"]
+      }
+    ]
+  }
+}

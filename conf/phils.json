@@ -1,0 +1,13 @@
+{
+  "orgName": "phils",
+  "vpcCidr": "10.41.0.0/16",
+  "region": "Frankfurt",
+
+  "sites": {
+    "mbaas1": {
+      "vpcCidr": "10.41.10.0/24",
+      "blueprint": "mbaas",
+      "grade": "small"
+    }
+  }
+}

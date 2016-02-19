@@ -1,0 +1,16 @@
+{
+  "small": {
+    "/dev/sda1": {
+      "volumeSize": 40,
+      "volumeType": "gp2",
+      "deleteOnTermination": false,
+      "encrypted": true
+    },
+    "/dev/sdb": {
+      "volumeSize": 40,
+      "volumeType": "gp2",
+      "deleteOnTermination": false,
+      "encrypted": true
+    }
+  }
+}
